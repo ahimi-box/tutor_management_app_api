@@ -12,7 +12,10 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
 #
     resource '*',
       headers: :any,
+<<<<<<< HEAD
       expose: ['access-token', 'uid', 'client', 'token-type'], #この行を新たに追加
+=======
+>>>>>>> d683ff330070dad4b1430996fd8218a72f3c94bd
       methods: [:get, :post, :put, :patch, :delete, :options, :head]
   end
 end
