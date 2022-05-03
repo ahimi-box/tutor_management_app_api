@@ -22,6 +22,11 @@ gem 'puma', '~> 4.1'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+# ログイン機能 
+gem 'devise' # 追加
+gem 'devise_token_auth' # 追加
+gem 'devise-i18n',        '1.9.4' # 追加
+
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem 'rack-cors'
 
