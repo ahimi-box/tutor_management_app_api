@@ -37,7 +37,7 @@ class DeviseTokenAuthCreateStudents < ActiveRecord::Migration[6.0]
       t.string :post_code
       t.string :address
       t.date :birthday
-      t.integer :teacher_id
+      # t.integer :teacher_id
 
       ## Tokens
       t.json :tokens

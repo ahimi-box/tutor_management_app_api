@@ -35,9 +35,9 @@ class DeviseTokenAuthCreateTeachers < ActiveRecord::Migration[6.0]
       t.string :email
 
       t.boolean :admin
-      t.boolean :teacher
+      t.boolean :teacher, :default => true
       t.string :introduction
-      t.integer :student_id
+      # t.integer :student_id
 
       ## Tokens
       t.json :tokens

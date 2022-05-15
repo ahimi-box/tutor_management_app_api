@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       # api test action
       resources :hello, only:[:index]
+      resources :teachers, only:[:index, :update, :destroy]
       mount_devise_token_auth_for 'Student', at: 'auth'
 
       mount_devise_token_auth_for 'Teacher', at: 'teacher_auth'
