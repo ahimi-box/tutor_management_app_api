@@ -28,7 +28,11 @@ class Api::V1::TeachersController < ApplicationController
   end
 
   def destroy
-    teacher = Teacher.find(params[:id]) 
+    teacher = Teacher.find(params[:id])
+    # 中間テーブル削除
+    teacher.students.each do |t_id|
+      teacher.students.destroy(t_id)
+    end
     if teacher.destroy
       render json: teacher, status: 200
     else
